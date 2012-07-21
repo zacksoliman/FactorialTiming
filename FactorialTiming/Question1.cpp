@@ -8,6 +8,7 @@ int main ()
 {
 	unsigned int n;
 	unsigned long long int rec_fact, it_fact;
+	timer time;
 
 	while(true){
 
@@ -17,9 +18,9 @@ int main ()
 	//First we call the recursive function
 	//And compute the elapsed time
 
-	timer::StartTimer();
+	time.StartTimer();
 	rec_fact = Factorial::recursive(n);	
-	double rec_time = timer::GetTime();
+	double rec_time = time.GetTime();
 
 	cout << "The result of the recursive factorial function is: " << endl 
 		<< rec_fact << endl << "It took: " << rec_time << " nanoseconds to compute"<<endl<<endl;
@@ -27,9 +28,9 @@ int main ()
 	//Calling the iterative factorial function
 	//and compute elapsed time
 
-	timer::StartTimer();
+	time.StartTimer();
 	it_fact = Factorial::iterative(n);
-	double it_time = timer::GetTime();
+	double it_time = time.GetTime();
 
 	cout << "The result of the iterative factorial function is: " << endl 
 		<< it_fact << endl << "It took: " << it_time << " nanoseconds seconds to compute"<<endl<<endl;

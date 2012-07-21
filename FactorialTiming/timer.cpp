@@ -11,10 +11,6 @@ timer::timer(void)
 }
 
 
-timer::~timer(void)
-{
-}
-
 void timer::StartTimer(void)
 {
 	QueryPerformanceCounter(&Lint);
